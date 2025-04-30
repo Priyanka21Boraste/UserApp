@@ -12,10 +12,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavController
 import com.user.poc.viewModel.UserViewModel
 
 @Composable
-fun UserFragment(viewModel: UserViewModel = hiltViewModel()) {
+fun UserFragment(navController: NavController, viewModel: UserViewModel = hiltViewModel()) {
     val users = viewModel.userList
     val context = LocalContext.current
 
